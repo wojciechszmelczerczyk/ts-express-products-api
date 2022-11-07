@@ -49,6 +49,6 @@ npm run dev
 | :----: | :--------------------------------------: |
 |  GET   |     [`/api/prodcuts`](./docs/get.md)     |
 |  GET   | [`/api/products/:id`](./docs/getById.md) |
-|  POST  |  [`/api/products/:id`](./docs/post.md)   |
+|  POST  |    [`/api/products`](./docs/post.md)     |
 |  PUT   |   [`/api/products/:id`](./docs/put.md)   |
 | DELETE | [`/api/products/:id`](./docs/delete.md)  |

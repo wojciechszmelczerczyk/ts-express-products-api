@@ -13,28 +13,46 @@ Simple REST API.
 
 ## Table of contents
 
+- [Prerequisities](#prerequisities)
+- [Usage](#usage)
+- [Postman collection](#postman-collection)
+- [API](#api)
+
 ## Prerequisities
 
 - `node` installed
+- http client
 
 ## Usage
 
-Clone repository
+### Clone repository
 
 ```
 git clone https://github.com/wojciechszmelczerczyk/ts-express-products-api.git
 ```
 
-Navigate to folder
+### Navigate to folder
 
 ```
 cd /ts-express-products-api
 ```
 
-Install dependencies
+### Install dependencies
 
 ```
 npm i
+```
+
+### Env
+
+Create `.env` file in project root directory.
+
+```dockerfile
+# Some port number
+PORT=
+
+# MongoDB uri
+DB_URI=
 ```
 
 Run REST API
@@ -43,11 +61,15 @@ Run REST API
 npm run dev
 ```
 
+## Postman collection
+
+You can import provided [postman collection](./ts-express-products-api.postman_collection.json) to test api.
+
 ## API
 
 | Method |                 Endpoint                 |
 | :----: | :--------------------------------------: |
-|  GET   |     [`/api/prodcuts`](./docs/get.md)     |
+|  GET   |     [`/api/products`](./docs/get.md)     |
 |  GET   | [`/api/products/:id`](./docs/getById.md) |
 |  POST  |    [`/api/products`](./docs/post.md)     |
 |  PUT   |   [`/api/products/:id`](./docs/put.md)   |

@@ -1,12 +1,11 @@
-import express, { Application } from "express";
-import products from "./routes/products";
+import { Application } from "express";
+import { createServer } from "./utils/createServer";
+import { dbConnection } from "./db/connection";
 
-const app: Application = express();
+dbConnection();
 
-app.use(express.json());
+const app: Application = createServer();
 
-app.use("/api/products", products);
+const port = process.env.PORT || 3000;
 
-const port: number = 3000 || process.env.PORT;
-
-app.listen(port, () => console.log("Listening at port 3000"));
+app.listen(port, () => console.log(`Server running on port ${port}`));

@@ -1,23 +1,15 @@
 import { Request, Response } from "express";
+import { JsonController, Get, Res, Req } from "routing-controllers";
+import { Service } from "typedi";
+import { ProductService } from "../services/productService";
 
-const products = [
-  { id: 1, name: "ball", price: 5 },
-  { id: 2, name: "shirt", price: 10 },
-  { id: 3, name: "shoes", price: 25 },
-];
+@JsonController("/products")
+@Service()
+export class ProductController {
+  constructor(private productService: ProductService) {}
 
-export const getProducts = (req: Request, res: Response) => res.json(products);
-
-export const getProduct = (req: Request, res: Response) =>
-  res.json(
-    products.filter((product) => product.id === parseInt(req.params.id))
-  );
-
-export const createProduct = (req: Request, res: Response) =>
-  res.json(req.body);
-
-export const updateProduct = (req: Request, res: Response) =>
-  res.json(req.body);
-
-export const deleteProduct = (req: Request, res: Response) =>
-  res.status(204).end();
+  @Get()
+  getProducts(@Req() _req: Request, @Res() _res: Response) {
+    return this.productService.getProducts();
+  }
+}

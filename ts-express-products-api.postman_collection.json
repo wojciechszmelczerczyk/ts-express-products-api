@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "97b8d5b0-2f95-47f8-8aa8-de55a8885318",
+		"name": "ts-express-products-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16678431"
+	},
+	"item": [
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,5 +1,5 @@
 import { Service } from "typedi";
-import productRepository from "../repositories/productRepository";
+import productRepository from "../repositories/ProductRepository";
 
 @Service()
 export class ProductService {

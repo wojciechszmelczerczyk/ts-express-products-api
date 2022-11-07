@@ -2,7 +2,7 @@ import "reflect-metadata";
 import express from "express";
 import { useContainer, useExpressServer } from "routing-controllers";
 import Container from "typedi";
-import { ProductController } from "../controllers/productController";
+import { ProductController } from "../controllers/ProductController";
 
 export const createServer = () => {
   useContainer(Container);

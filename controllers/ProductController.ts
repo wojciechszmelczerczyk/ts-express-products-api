@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { JsonController, Get, Res, Req } from "routing-controllers";
 import { Service } from "typedi";
-import { ProductService } from "../services/productService";
+import { ProductService } from "../services/ProductService";
 
 @JsonController("/products")
 @Service()

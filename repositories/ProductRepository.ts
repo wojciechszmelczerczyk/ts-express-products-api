@@ -23,4 +23,16 @@ export default class ProductRepository implements IRead, IWrite {
   async insert(product: IProduct, res: any): Promise<any> {
     return res.json(await Product.create(product));
   }
+
+  async update(product: IProduct, id: string, res: any): Promise<any> {
+    const updatedProduct = await Product.findByIdAndUpdate(id, product, {
+      new: true,
+      runValidators: true,
+    });
+
+    if (!updatedProduct)
+      res.status(400).json({ id: "Product with provided id doesn't exist" });
+
+    return res.json(updatedProduct);
+  }
 }

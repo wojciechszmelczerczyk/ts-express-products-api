@@ -17,4 +17,8 @@ export default class ProductService {
   public async createProduct(product: IProduct, res: any) {
     return await this.productRepository.insert(product, res);
   }
+
+  public async updateProduct(product, id, res) {
+    return await this.productRepository.update(product, id, res);
+  }
 }

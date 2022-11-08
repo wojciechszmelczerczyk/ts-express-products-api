@@ -9,6 +9,7 @@ import {
   UseAfter,
   Param,
   UseBefore,
+  Put,
 } from "routing-controllers";
 import { Service } from "typedi";
 import { IProduct } from "../interfaces/IProduct";
@@ -43,5 +44,17 @@ export class ProductController {
     @Body() product: IProduct
   ) {
     return this.productService.createProduct(product, res);
+  }
+
+  @Put("/:id?")
+  @UseBefore(VerifyParamMiddleware)
+  @UseAfter(ErrorMiddleware)
+  updateProduct(
+    @Req() _req: Request,
+    @Res() res: Response,
+    @Body() product: IProduct,
+    @Param("id") id: string
+  ) {
+    return this.productService.updateProduct(product, id, res);
   }
 }

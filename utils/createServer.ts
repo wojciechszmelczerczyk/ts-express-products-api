@@ -14,6 +14,7 @@ export const createServer = () => {
   return useExpressServer(app, {
     routePrefix: "/api",
     controllers: [ProductController],
+    classTransformer: false,
     defaultErrorHandler: false,
   });
 };

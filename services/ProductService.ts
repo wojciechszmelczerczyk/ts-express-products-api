@@ -10,6 +10,10 @@ export default class ProductService {
     return await this.productRepository.findAll();
   }
 
+  public async getProductById(id: string, res: any) {
+    return await this.productRepository.findById(id, res);
+  }
+
   public async createProduct(product: IProduct, res: any) {
     return await this.productRepository.insert(product, res);
   }

@@ -4,7 +4,7 @@ import { Service } from "typedi";
 @Service()
 export class ErrorMiddleware implements ExpressErrorMiddlewareInterface {
   error(err: any, req: any, res: any, next: (err: any) => any) {
-    // format error message
+    // intercepts errors and format error response object
     if (err.name === "ValidationError") {
       let errors = {};
 

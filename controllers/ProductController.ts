@@ -7,12 +7,14 @@ import {
   Post,
   Body,
   UseAfter,
+  Param,
+  UseBefore,
 } from "routing-controllers";
 import { Service } from "typedi";
 import { IProduct } from "../interfaces/IProduct";
 import ProductService from "../services/ProductService";
 import { ErrorMiddleware } from "../middlewares/ErrorMiddleware";
-
+import { VerifyParamMiddleware } from "../middlewares/VerifyParamMiddleware";
 @JsonController("/products")
 @Service()
 export class ProductController {
@@ -21,6 +23,16 @@ export class ProductController {
   @Get()
   getProducts(@Req() _req: Request, @Res() _res: Response) {
     return this.productService.getProducts();
+  }
+
+  @Get("/:id")
+  @UseBefore(VerifyParamMiddleware)
+  getProductById(
+    @Req() _req: Request,
+    @Res() res: Response,
+    @Param("id") id: string
+  ) {
+    return this.productService.getProductById(id, res);
   }
 
   @Post()

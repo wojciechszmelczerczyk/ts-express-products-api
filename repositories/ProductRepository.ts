@@ -35,4 +35,11 @@ export default class ProductRepository implements IRead, IWrite {
 
     return res.json(updatedProduct);
   }
+
+  async delete(id: string, res: any): Promise<any> {
+    const deletedProduct = await Product.findByIdAndDelete(id);
+    if (!deletedProduct)
+      res.status(400).json({ id: "Product with provided id doesn't exist" });
+    return res.status(204).end();
+  }
 }

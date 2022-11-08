@@ -10,6 +10,7 @@ import {
   Param,
   UseBefore,
   Put,
+  Delete,
 } from "routing-controllers";
 import { Service } from "typedi";
 import { IProduct } from "../interfaces/IProduct";
@@ -56,5 +57,15 @@ export class ProductController {
     @Param("id") id: string
   ) {
     return this.productService.updateProduct(product, id, res);
+  }
+
+  @Delete("/:id?")
+  @UseBefore(VerifyParamMiddleware)
+  deleteProduct(
+    @Req() _req: Request,
+    @Res() res: Response,
+    @Param("id") id: string
+  ) {
+    return this.productService.deleteProduct(id, res);
   }
 }

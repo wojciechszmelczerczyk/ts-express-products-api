@@ -16,6 +16,7 @@ Simple REST API.
 - [Prerequisities](#prerequisities)
 - [Usage](#usage)
 - [Postman collection](#postman-collection)
+- [Architecture](#architecture)
 - [API](#api)
 
 ## Prerequisities
@@ -64,6 +65,12 @@ npm run dev
 ## Postman collection
 
 You can import provided [postman collection](./ts-express-products-api.postman_collection.json) to test api.
+
+## Architecture
+
+### Introduction
+
+Library used to develop app architecture [routing-controllers](https://github.com/typestack/routing-controllers). REST API using `Controller`, `Service` and `Repository` approach.
 
 ## API
 

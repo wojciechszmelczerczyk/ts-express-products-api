@@ -1,17 +1,28 @@
 import { Schema, model } from "mongoose";
 import { IProduct } from "../interfaces/IProduct";
+import validator from "validator";
 
 const productSchema = new Schema<IProduct>(
   {
     name: {
       type: String,
-      required: [true, "Please provide the note title"],
-      minlength: [4, "Name is too short. Minimum length is 4 characters"],
-      maxlength: [100, "Name is too long. Maximum length is 100 characters"],
+      required: [true, "Please provide the product name"],
+      minlength: [
+        4,
+        "Product name is too short. Minimum length is 4 characters",
+      ],
+      maxlength: [
+        100,
+        "Product name is too long. Maximum length is 100 characters",
+      ],
     },
     price: {
-      type: Number,
-      required: [true, "Please provide product price"],
+      type: String,
+      required: [true, "Please provide the product price"],
+      validate: [
+        validator.isNumeric,
+        "Provided price has to be a numeric value",
+      ],
     },
   },
   { timestamps: true }

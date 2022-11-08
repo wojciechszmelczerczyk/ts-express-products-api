@@ -6,10 +6,10 @@ Simple REST API.
 
 ## Techstack
 
-- `express`
-- `typescript`
-- `mongodb`
-- `mongoose`
+- `Express`
+- `Typescript`
+- `Mongodb`
+- `Mongoose`
 
 ## Table of contents
 
@@ -22,7 +22,7 @@ Simple REST API.
 ## Prerequisities
 
 - `node` installed
-- http client
+- `http client`
 
 ## Usage
 
@@ -56,7 +56,7 @@ PORT=
 DB_URI=
 ```
 
-Run REST API
+### Run REST API
 
 ```
 npm run dev

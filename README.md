@@ -72,6 +72,18 @@ You can import provided [postman collection](./ts-express-products-api.postman_c
 
 Library used to develop app architecture [routing-controllers](https://github.com/typestack/routing-controllers). REST API using `Controller`, `Service` and `Repository` approach.
 
+GET `/api/products`
+
+User send request to the server, server query database and find all products.
+
+<details>
+
+<summary>Example</summary>
+<img src="./.github/img/arch-get.png">
+
+</details>
+<br/>
+
 ## API
 
 | Method |                 Endpoint                 |

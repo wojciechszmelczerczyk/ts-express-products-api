@@ -53,7 +53,7 @@ Updated product returned.
 
 Code: `400 BAD REQUEST`
 
-Condition: If provided id is incorrect type.
+Condition: If provided id has incorrect type.
 
 ```json
 { "id": "Provided id is incorrect" }

@@ -1,4 +1,4 @@
-# Get products
+# Get product by id
 
 ## Description
 
@@ -31,7 +31,7 @@ Condition: If product with provided correctly id exists.
 
 Code: `400 BAD REQUEST`
 
-Condition: If provided is incorrect type.
+Condition: If provided id has incorrect type.
 
 ```json
 { "id": "Provided id is incorrect" }
@@ -39,7 +39,7 @@ Condition: If provided is incorrect type.
 
 Code: `400 BAD REQUEST`
 
-Condition: If no id provided.
+Condition: If product with provided id doesn't exist.
 
 ```json
 { "id": "Product with provided id doesn't exist" }

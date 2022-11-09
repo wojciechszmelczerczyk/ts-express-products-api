@@ -21,8 +21,8 @@
 
 ```json
 {
-  "name": "jacket",
-  "price": 200
+  "name": "ball",
+  "price": 105
 }
 ```
 

@@ -14,7 +14,9 @@ export default class ProductRepository implements IRead, IWrite {
     const product = await Product.findById(id);
     // if no product found with provided id, return error message
     if (!product)
-      res.status(400).json({ id: "Product with provided id doesn't exist" });
+      return res
+        .status(400)
+        .json({ id: "Product with provided id doesn't exist" });
 
     // otherwise return product
     return product;
@@ -31,7 +33,9 @@ export default class ProductRepository implements IRead, IWrite {
     });
 
     if (!updatedProduct)
-      res.status(400).json({ id: "Product with provided id doesn't exist" });
+      return res
+        .status(400)
+        .json({ id: "Product with provided id doesn't exist" });
 
     return res.json(updatedProduct);
   }
@@ -39,7 +43,9 @@ export default class ProductRepository implements IRead, IWrite {
   async delete(id: string, res: any): Promise<any> {
     const deletedProduct = await Product.findByIdAndDelete(id);
     if (!deletedProduct)
-      res.status(400).json({ id: "Product with provided id doesn't exist" });
+      return res
+        .status(400)
+        .json({ id: "Product with provided id doesn't exist" });
     return res.status(204).end();
   }
 }

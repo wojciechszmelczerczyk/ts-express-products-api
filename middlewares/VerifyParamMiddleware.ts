@@ -10,12 +10,12 @@ export class VerifyParamMiddleware implements ExpressMiddlewareInterface {
     // if put or delete request, check if id was provided
     // if not return error message
     if ((!id && req.method === "PUT") || (!id && req.method === "DELETE"))
-      res.status(400).json({ id: "No id provided" });
+      return res.status(400).json({ id: "No id provided" });
 
     // check if provided url param is consistent with mongoose object id
     // if not return error message
     if (!mongoose.isValidObjectId(id))
-      res.status(400).json({ id: "Provided id is incorrect" });
+      return res.status(400).json({ id: "Provided id is incorrect" });
 
     // otherwise pass handler to controller
     next();

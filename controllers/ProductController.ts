@@ -16,7 +16,7 @@ import { Service } from "typedi";
 import { IProduct } from "../interfaces/IProduct";
 import ProductService from "../services/ProductService";
 import { ErrorMiddleware } from "../middlewares/ErrorMiddleware";
-import { VerifyParamMiddleware } from "../middlewares/VerifyParamMiddleware";
+import { ValidateIdMiddleware } from "../middlewares/ValidateIdMiddleware";
 @JsonController("/products")
 @Service()
 export class ProductController {
@@ -28,7 +28,7 @@ export class ProductController {
   }
 
   @Get("/:id")
-  @UseBefore(VerifyParamMiddleware)
+  @UseBefore(ValidateIdMiddleware)
   getProductById(
     @Req() _req: Request,
     @Res() res: Response,
@@ -48,7 +48,7 @@ export class ProductController {
   }
 
   @Put("/:id?")
-  @UseBefore(VerifyParamMiddleware)
+  @UseBefore(ValidateIdMiddleware)
   @UseAfter(ErrorMiddleware)
   updateProduct(
     @Req() _req: Request,
@@ -60,7 +60,7 @@ export class ProductController {
   }
 
   @Delete("/:id?")
-  @UseBefore(VerifyParamMiddleware)
+  @UseBefore(ValidateIdMiddleware)
   deleteProduct(
     @Req() _req: Request,
     @Res() res: Response,

@@ -17,12 +17,9 @@ const productSchema = new Schema<IProduct>(
       ],
     },
     price: {
-      type: String,
+      type: Number,
       required: [true, "Please provide the product price"],
-      validate: [
-        validator.isNumeric,
-        "Provided price has to be a numeric value",
-      ],
+      cast: "Provided price has to be a numeric value",
     },
   },
   { timestamps: true }

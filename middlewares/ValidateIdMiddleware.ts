@@ -3,7 +3,7 @@ import { ExpressMiddlewareInterface } from "routing-controllers";
 import { Service } from "typedi";
 
 @Service()
-export class VerifyParamMiddleware implements ExpressMiddlewareInterface {
+export class ValidateIdMiddleware implements ExpressMiddlewareInterface {
   use(req: any, res: any, next: (err?: any) => any) {
     const id = req.params.id;
 

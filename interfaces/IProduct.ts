@@ -1,4 +1,4 @@
 export interface IProduct {
-  name: String;
-  price: String;
+  name: string;
+  price: number;
 }

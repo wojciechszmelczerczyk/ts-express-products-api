@@ -88,7 +88,7 @@ GET `/api/products/:id`
 
 User send request to the server with provided id parameter.
 
-[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+[Middleware](./middlewares/ValidateIdMiddleware.ts) validate if provided id has correct syntax.
 
 If syntax is incorrect API returns `400` with error message.
 
@@ -126,7 +126,7 @@ PUT `/api/products/:id`
 
 User send request to the server with `id` parameter and `name`, `price` data.
 
-[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+[Middleware](./middlewares/ValidateIdMiddleware.ts) validate if provided id has correct syntax.
 
 If syntax is incorrect API returns `400` with error message.
 
@@ -146,7 +146,7 @@ DELETE `/api/products/:id`
 
 User send request to the server with `id` parameter.
 
-[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+[Middleware](./middlewares/ValidateIdMiddleware.ts) validate if provided id has correct syntax.
 
 If syntax is incorrect API returns `400` with error message.
 

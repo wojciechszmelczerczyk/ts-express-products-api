@@ -55,15 +55,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "302"
+							"value": "742"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"12e-SUqwoxPsZct5Qu770Yp2HdjsJbM\""
+							"value": "W/\"2e6-p8/pPtGLOLa3LEksuqnimNsNohY\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 08 Nov 2022 13:00:09 GMT"
+							"value": "Thu, 10 Nov 2022 18:08:59 GMT"
 						},
 						{
 							"key": "Connection",
@@ -75,7 +75,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"_id\": \"636a3607d605b34d1466735b\",\n        \"name\": \"jacket\",\n        \"price\": \"200\",\n        \"createdAt\": \"2022-11-08T10:57:11.089Z\",\n        \"updatedAt\": \"2022-11-08T10:57:11.089Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"636a52d137a6e244ece6dbad\",\n        \"name\": \"shoes\",\n        \"price\": \"100\",\n        \"createdAt\": \"2022-11-08T13:00:01.161Z\",\n        \"updatedAt\": \"2022-11-08T13:00:01.161Z\",\n        \"__v\": 0\n    }\n]"
+					"body": "[\n    {\n        \"_id\": \"636d3d1d99f4dea3b0f89b1e\",\n        \"name\": \"jacket\",\n        \"price\": 200,\n        \"createdAt\": \"2022-11-10T18:04:13.783Z\",\n        \"updatedAt\": \"2022-11-10T18:04:13.783Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"636d3e0e99f4dea3b0f89b28\",\n        \"name\": \"shoes\",\n        \"price\": 150,\n        \"createdAt\": \"2022-11-10T18:08:14.700Z\",\n        \"updatedAt\": \"2022-11-10T18:08:14.700Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"636d3e1f99f4dea3b0f89b2a\",\n        \"name\": \"socks\",\n        \"price\": 5,\n        \"createdAt\": \"2022-11-10T18:08:31.610Z\",\n        \"updatedAt\": \"2022-11-10T18:08:31.610Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"636d3e2d99f4dea3b0f89b2d\",\n        \"name\": \"trousers\",\n        \"price\": 80,\n        \"createdAt\": \"2022-11-10T18:08:45.107Z\",\n        \"updatedAt\": \"2022-11-10T18:08:45.107Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"636d3e3699f4dea3b0f89b2f\",\n        \"name\": \"shirt\",\n        \"price\": 110,\n        \"createdAt\": \"2022-11-10T18:08:54.869Z\",\n        \"updatedAt\": \"2022-11-10T18:08:54.869Z\",\n        \"__v\": 0\n    }\n]"
 				}
 			]
 		},
@@ -86,7 +86,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"jacket\",\n    \"price\":\"\"\n}",
+					"raw": "{\n    \"name\":\"rocket\",\n    \"price\":\"a\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,13 +107,13 @@
 			},
 			"response": [
 				{
-					"name": "when provided data is correct",
+					"name": "when data is correct",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"jacket\",\n    \"price\":200\n}",
+							"raw": "{\n    \"name\":\"rocket\",\n    \"price\":300\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -146,15 +146,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "150"
+							"value": "148"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"96-5flug/v6Fl7DTFMQ2kws4H1HM9Q\""
+							"value": "W/\"94-B7eC0nVg0HAAwsGD2JXrlUTttwc\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 08 Nov 2022 10:57:11 GMT"
+							"value": "Thu, 10 Nov 2022 18:10:04 GMT"
 						},
 						{
 							"key": "Connection",
@@ -166,255 +166,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"name\": \"jacket\",\n    \"price\": \"200\",\n    \"_id\": \"636a3607d605b34d1466735b\",\n    \"createdAt\": \"2022-11-08T10:57:11.089Z\",\n    \"updatedAt\": \"2022-11-08T10:57:11.089Z\",\n    \"__v\": 0\n}"
-				},
-				{
-					"name": "when provided name is too short",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"x\",\n    \"price\":\"200\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "68"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"44-sqrRbW52ZT+AJFE+2p4WZcCDDCg\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 10:59:08 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"name\": \"Product name is too short. Minimum length is 4 characters\"\n}"
-				},
-				{
-					"name": "when provided name is too long",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n    \"price\":\"200\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "69"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"45-I6TXStb6DNmgfxBUWJq8Li/e1kM\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 10:59:40 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"name\": \"Product name is too long. Maximum length is 100 characters\"\n}"
-				},
-				{
-					"name": "when provided price is not a numeric value",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"jacket\",\n    \"price\":\"x\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "52"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"34-4Xt26z0d2rCx7H5oUOoiaI3nVV8\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 11:00:16 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"price\": \"Provided price has to be a numeric value\"\n}"
-				},
-				{
-					"name": "when no name provided",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"\",\n    \"price\":\"200\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "42"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"2a-AotVFg98PgeVVSssI55N78wAN3M\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 10:58:35 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"name\": \"Please provide the product name\"\n}"
+					"body": "{\n    \"name\": \"rocket\",\n    \"price\": 300,\n    \"_id\": \"636d3e7c99f4dea3b0f89b32\",\n    \"createdAt\": \"2022-11-10T18:10:04.787Z\",\n    \"updatedAt\": \"2022-11-10T18:10:04.787Z\",\n    \"__v\": 0\n}"
 				},
 				{
 					"name": "when no data provided",
@@ -456,15 +208,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "81"
+							"value": "85"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"51-dxVvxSjhNUID6TNksuIn3h3mHn0\""
+							"value": "W/\"55-XrSLa0YHT6/piUTqSV26BzgcOPI\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 08 Nov 2022 11:00:52 GMT"
+							"value": "Thu, 10 Nov 2022 18:10:39 GMT"
 						},
 						{
 							"key": "Connection",
@@ -476,16 +228,16 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"name\": \"Please provide the product name\",\n    \"price\": \"Please provide product price\"\n}"
+					"body": "{\n    \"name\": \"Please provide the product name\",\n    \"price\": \"Please provide the product price\"\n}"
 				},
 				{
-					"name": "when no price provided",
+					"name": "when provided name is too short",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"jacket\",\n    \"price\":\"\"\n}",
+							"raw": "{\n    \"name\":\"a\",\n    \"price\":300\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -518,345 +270,6 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "44"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"2c-7+sxj/YNl1ytkj5YaFsLuy/nmuw\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 11:02:07 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"price\": \"Please provide the product price\"\n}"
-				}
-			]
-		},
-		{
-			"name": "get product by id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:3000/api/products/xxx",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"xxx"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "when product with provided id exist",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:3000/api/products/636a3096e546a06d0b51777e",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								"636a3096e546a06d0b51777e"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "149"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"95-Kfu5+iPWoxX4qZUCQl8EU96e4gQ\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 12:57:00 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"_id\": \"636a3096e546a06d0b51777e\",\n    \"name\": \"ssss\",\n    \"price\": \"2000\",\n    \"createdAt\": \"2022-11-08T10:33:58.809Z\",\n    \"updatedAt\": \"2022-11-08T10:33:58.809Z\",\n    \"__v\": 0\n}"
-				},
-				{
-					"name": "when product with provided id doesn't exist",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:3000/api/products/636a3096e546a06d0b50777e",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								"636a3096e546a06d0b50777e"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "47"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"2f-fb7pzpIs6GiaVxp8BLYUveQLxWU\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 12:57:40 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"Product with provided id doesn't exist\"\n}"
-				},
-				{
-					"name": "when provided id doesn't match mongoose object id syntax",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "localhost:3000/api/products/xxx",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								"xxx"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "33"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"21-FJFPhEW4JVO4HJe8G8LWrCcpk/M\""
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 08 Nov 2022 12:57:59 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"Provided id is incorrect\"\n}"
-				}
-			]
-		},
-		{
-			"name": "update product",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\":\"boots\",\n    \"price\":300\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:3000/api/products/636b61aa11567290c4db376c",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"636b61aa11567290c4db376c"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "when provided id and body data correct",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"boots\",\n    \"price\":300\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products/",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								""
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "149"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"95-fFL2pTMhoQfLoYf36FdyjhDxhkU\""
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:21:02 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"_id\": \"636b61aa77567290c4db376c\",\n    \"name\": \"boots\",\n    \"price\": \"300\",\n    \"createdAt\": \"2022-11-09T08:15:38.672Z\",\n    \"updatedAt\": \"2022-11-09T08:21:01.944Z\",\n    \"__v\": 0\n}"
-				},
-				{
-					"name": "when provided product name is too short",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"x\",\n    \"price\":300\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products/636b61aa77567290c4db376c",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								"636b61aa77567290c4db376c"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
 							"value": "68"
 						},
 						{
@@ -865,7 +278,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:22:10 GMT"
+							"value": "Thu, 10 Nov 2022 18:11:08 GMT"
 						},
 						{
 							"key": "Connection",
@@ -880,13 +293,13 @@
 					"body": "{\n    \"name\": \"Product name is too short. Minimum length is 4 characters\"\n}"
 				},
 				{
-					"name": "when provided price is not a numeric value",
+					"name": "when provided name is too long",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"boots\",\n    \"price\":\"x\"\n}",
+							"raw": "{\n    \"name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"price\":300\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -894,15 +307,76 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/products/636b61aa77567290c4db376c",
+							"raw": "localhost:3000/api/products",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"products",
-								"636b61aa77567290c4db376c"
+								"products"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"45-I6TXStb6DNmgfxBUWJq8Li/e1kM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:11:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Product name is too long. Maximum length is 100 characters\"\n}"
+				},
+				{
+					"name": "when provided price is not a numeric value",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"rocket\",\n    \"price\":\"a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
 							]
 						}
 					},
@@ -928,7 +402,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:22:48 GMT"
+							"value": "Thu, 10 Nov 2022 18:12:12 GMT"
 						},
 						{
 							"key": "Connection",
@@ -941,23 +415,35 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"price\": \"Provided price has to be a numeric value\"\n}"
-				},
+				}
+			]
+		},
+		{
+			"name": "get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"a"
+					]
+				}
+			},
+			"response": [
 				{
-					"name": "when no id provided",
+					"name": "when product with provided id exist",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"boots\",\n    \"price\":\"x\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:3000/api/products/",
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
 							"host": [
 								"localhost"
 							],
@@ -965,12 +451,12 @@
 							"path": [
 								"api",
 								"products",
-								""
+								"636d3d1d99f4dea3b0f89b1e"
 							]
 						}
 					},
-					"status": "Bad Request",
-					"code": 400,
+					"status": "OK",
+					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
 						{
@@ -983,15 +469,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "23"
+							"value": "148"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"17-0bQu5XrO1rFQIv46LObI5tU4aU0\""
+							"value": "W/\"94-sfVi7vJLo0CLK1VhRuF3d+2jmjk\""
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:23:39 GMT"
+							"value": "Thu, 10 Nov 2022 18:13:58 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1003,87 +489,15 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"id\": \"No id provided\"\n}"
-				},
-				{
-					"name": "when provided id is incorrect",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"boots\",\n    \"price\":\"x\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "localhost:3000/api/products/x",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"products",
-								"x"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "33"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"21-FJFPhEW4JVO4HJe8G8LWrCcpk/M\""
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:23:57 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"id\": \"Provided id is incorrect\"\n}"
+					"body": "{\n    \"_id\": \"636d3d1d99f4dea3b0f89b1e\",\n    \"name\": \"jacket\",\n    \"price\": 200,\n    \"createdAt\": \"2022-11-10T18:04:13.783Z\",\n    \"updatedAt\": \"2022-11-10T18:04:13.783Z\",\n    \"__v\": 0\n}"
 				},
 				{
 					"name": "when product with provided id doesn't exist",
 					"originalRequest": {
-						"method": "PUT",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"boots\",\n    \"price\":300\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:3000/api/products/636b61aa11567290c4db376c",
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1a",
 							"host": [
 								"localhost"
 							],
@@ -1091,7 +505,7 @@
 							"path": [
 								"api",
 								"products",
-								"636b61aa11567290c4db376c"
+								"636d3d1d99f4dea3b0f89b1a"
 							]
 						}
 					},
@@ -1117,7 +531,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:24:55 GMT"
+							"value": "Thu, 10 Nov 2022 18:14:22 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1130,35 +544,14 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"id\": \"Product with provided id doesn't exist\"\n}"
-				}
-			]
-		},
-		{
-			"name": "delete product",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:3000/api/products/x",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"products",
-						"x"
-					]
-				}
-			},
-			"response": [
+				},
 				{
-					"name": "when provided id is correct",
+					"name": "when provided id is invalid",
 					"originalRequest": {
-						"method": "DELETE",
+						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/api/products/636b61aa77567290c4db376c",
+							"raw": "localhost:3000/api/products/a",
 							"host": [
 								"localhost"
 							],
@@ -1166,21 +559,33 @@
 							"path": [
 								"api",
 								"products",
-								"636b61aa77567290c4db376c"
+								"a"
 							]
 						}
 					},
-					"status": "No Content",
-					"code": 204,
-					"_postman_previewlanguage": "plain",
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
 					"header": [
 						{
 							"key": "X-Powered-By",
 							"value": "Express"
 						},
 						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-FJFPhEW4JVO4HJe8G8LWrCcpk/M\""
+						},
+						{
 							"key": "Date",
-							"value": "Wed, 09 Nov 2022 08:25:56 GMT"
+							"value": "Thu, 10 Nov 2022 18:14:42 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1192,8 +597,374 @@
 						}
 					],
 					"cookie": [],
-					"body": null
+					"body": "{\n    \"id\": \"Provided id is incorrect\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"price\":20000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
+				"url": {
+					"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"636d3d1d99f4dea3b0f89b1e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "when product with provided id exist and body data is correct",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"gucci jacket\",\n    \"price\":20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b1e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "156"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9c-GL+Rx7ctaAPT0X1R3aFHyh+nvKA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:16:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"636d3d1d99f4dea3b0f89b1e\",\n    \"name\": \"gucci jacket\",\n    \"price\": 20000,\n    \"createdAt\": \"2022-11-10T18:04:13.783Z\",\n    \"updatedAt\": \"2022-11-10T18:16:21.223Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "when product with provided id doesn't exist",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"gucci jacket\",\n    \"price\":20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b0e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b0e"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f-fb7pzpIs6GiaVxp8BLYUveQLxWU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:16:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"Product with provided id doesn't exist\"\n}"
+				},
+				{
+					"name": "when no data provided",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"\",\n    \"price\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b1e"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"55-Sqrv5oQlsXjprYmdYQDo67z8MR4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:17:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"price\": \"Please provide the product price\",\n    \"name\": \"Please provide the product name\"\n}"
+				},
+				{
+					"name": "when provided name is too short",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"a\",\n    \"price\":20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b1e"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-sqrRbW52ZT+AJFE+2p4WZcCDDCg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:17:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Product name is too short. Minimum length is 4 characters\"\n}"
+				},
+				{
+					"name": "when provided name is too long",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\n    \"price\":20000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b1e"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"45-I6TXStb6DNmgfxBUWJq8Li/e1kM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:18:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Product name is too long. Maximum length is 100 characters\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"636d3d1d99f4dea3b0f89b1e"
+					]
+				}
+			},
+			"response": [
 				{
 					"name": "when product with provided id doesn't exist",
 					"originalRequest": {
@@ -1355,6 +1126,48 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"id\": \"Provided id is incorrect\"\n}"
+				},
+				{
+					"name": "when product with provided id exist",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/products/636d3d1d99f4dea3b0f89b1e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"636d3d1d99f4dea3b0f89b1e"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 10 Nov 2022 18:19:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
 				}
 			]
 		}

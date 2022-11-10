@@ -122,6 +122,48 @@ Otherwise new product is being returned.
 </details>
 <br/>
 
+PUT `/api/products/:id`
+
+User send request to the server with `id` parameter and `name`, `price` data.
+
+[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+
+If syntax is incorrect API returns `400` with error message.
+
+If no data provided or data is invalid, [error middleware](./middlewares/ErrorMiddleware.ts) intercept error, modify error message and return to the client with `400` status.
+
+Otherwise updated product is being returned.
+
+<details>
+
+<summary>Example</summary>
+<img src="./.github/img/arch-put.png">
+
+</details>
+<br/>
+
+DELETE `/api/products/:id`
+
+User send request to the server with `id` parameter.
+
+[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+
+If syntax is incorrect API returns `400` with error message.
+
+Otherwise handler is being passed to controller where server validate if product with provided id exists.
+
+If not `400` with error message is returned.
+
+When deletion of product is successful, server respond with `204` status.
+
+<details>
+
+<summary>Example</summary>
+<img src="./.github/img/arch-delete.png">
+
+</details>
+<br/>
+
 ## API
 
 | Method |                 Endpoint                 |

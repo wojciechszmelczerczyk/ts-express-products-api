@@ -84,6 +84,44 @@ User send request to the server, server query database and find all products.
 </details>
 <br/>
 
+GET `/api/products/:id`
+
+User send request to the server with provided id parameter.
+
+[Middleware](./middlewares//VerifyParamMiddleware.ts) validate if provided id has correct syntax.
+
+If syntax is incorrect API returns `400` with error message.
+
+If provided id has correct syntax, middleware pass handler to the server.
+
+Server try to query product with specific id from database.
+
+If product doesn't exist, API respond with `400` and error message.
+
+<details>
+
+<summary>Example</summary>
+<img src="./.github/img/arch-getbyid.png">
+
+</details>
+<br/>
+
+POST `/api/products`
+
+User send request to the server with `name` and `price` data.
+
+If no data provided or data is invalid, [error middleware](./middlewares/ErrorMiddleware.ts) intercept error, modify error message and return to the client with `400` status.
+
+Otherwise new product is being returned.
+
+<details>
+
+<summary>Example</summary>
+<img src="./.github/img/arch-post.png">
+
+</details>
+<br/>
+
 ## API
 
 | Method |                 Endpoint                 |

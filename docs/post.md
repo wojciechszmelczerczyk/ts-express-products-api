@@ -30,6 +30,8 @@ Save new product in database.
 
 Code: `200 OK`
 
+Condition: If provided data is correct.
+
 ### Context example
 
 ```json
@@ -78,7 +80,7 @@ Code: `400 BAD REQUEST`
 Condition: If no price provided.
 
 ```json
-{ "price": "Please provide product price" }
+{ "price": "Please provide the product price" }
 ```
 
 Code: `400 BAD REQUEST`

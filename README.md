@@ -41,7 +41,7 @@ cd /ts-express-products-api
 ### Install dependencies
 
 ```
-npm i
+npm i --force
 ```
 
 ### Env

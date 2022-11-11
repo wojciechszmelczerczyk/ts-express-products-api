@@ -2,6 +2,8 @@
 
 ## Description
 
+Get product by id from database.
+
 <b>URL :</b> `/api/products/:id`
 
 <b>URL parameter:</b> `id=[string]` where `id` is mongoose object id syntax.

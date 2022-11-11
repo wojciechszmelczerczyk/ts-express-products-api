@@ -2,6 +2,8 @@
 
 ## Description
 
+Get all products from database.
+
 <b>URL :</b> `/api/products`
 
 <b>Method:</b> `GET`

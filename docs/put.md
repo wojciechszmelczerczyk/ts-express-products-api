@@ -2,6 +2,8 @@
 
 ## Description
 
+Update product in database.
+
 <b>URL :</b> `/api/products/:id`
 
 <b>URL parameter:</b> `id=[string]` where `id` is mongoose object id syntax.

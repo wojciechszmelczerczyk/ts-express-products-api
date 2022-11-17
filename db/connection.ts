@@ -1,5 +1,5 @@
-import mongoose, { ConnectOptions } from "mongoose";
 import "dotenv/config";
+import mongoose, { ConnectOptions } from "mongoose";
 
 mongoose.connection.on("connected", () =>
   console.log("Database connection on")
@@ -11,13 +11,10 @@ mongoose.connection.on("disconnected", () =>
 
 const dbConnection = async () => {
   try {
-    mongoose.connect(
-      process.env.DB_URI as any,
-      {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      } as ConnectOptions
-    );
+    mongoose.connect(process.env.DB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    } as ConnectOptions);
   } catch (err) {
     // if error occured kill process
     process.exit(1);

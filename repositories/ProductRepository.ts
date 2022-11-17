@@ -3,6 +3,7 @@ import Product from "../models/Product";
 import { IRead } from "../interfaces/IRead";
 import { IWrite } from "../interfaces/IWrite";
 import { IProduct } from "../interfaces/IProduct";
+import { Response } from "express";
 
 @Service()
 export default class ProductRepository implements IRead, IWrite {
@@ -10,7 +11,7 @@ export default class ProductRepository implements IRead, IWrite {
     return await Product.find();
   }
 
-  async findById(id: string, res: any): Promise<any> {
+  async findById(id: string, res: Response): Promise<any> {
     const product = await Product.findById(id);
     // if no product found with provided id, return error message
     if (!product)
@@ -22,11 +23,11 @@ export default class ProductRepository implements IRead, IWrite {
     return product;
   }
 
-  async insert(product: IProduct, res: any): Promise<any> {
+  async insert(product: IProduct, res: Response): Promise<any> {
     return res.json(await Product.create(product));
   }
 
-  async update(product: IProduct, id: string, res: any): Promise<any> {
+  async update(product: IProduct, id: string, res: Response): Promise<any> {
     const updatedProduct = await Product.findByIdAndUpdate(id, product, {
       new: true,
       runValidators: true,
@@ -40,7 +41,7 @@ export default class ProductRepository implements IRead, IWrite {
     return res.json(updatedProduct);
   }
 
-  async delete(id: string, res: any): Promise<any> {
+  async delete(id: string, res: Response): Promise<any> {
     const deletedProduct = await Product.findByIdAndDelete(id);
     if (!deletedProduct)
       return res

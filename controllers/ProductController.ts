@@ -17,6 +17,7 @@ import { IProduct } from "../interfaces/IProduct";
 import ProductService from "../services/ProductService";
 import { ErrorMiddleware } from "../middlewares/ErrorMiddleware";
 import { ValidateIdMiddleware } from "../middlewares/ValidateIdMiddleware";
+
 @JsonController("/products")
 @Service()
 export class ProductController {

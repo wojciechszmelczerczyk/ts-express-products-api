@@ -1,15 +1,13 @@
 import "reflect-metadata";
-import express from "express";
+import express, { Application } from "express";
 import { useContainer, useExpressServer } from "routing-controllers";
 import Container from "typedi";
 import { ProductController } from "../controllers/ProductController";
 
-export const createServer = () => {
+export const createServer = (): Application => {
   useContainer(Container);
 
-  const app = express();
-
-  app.use(express.json());
+  const app: Application = express();
 
   return useExpressServer(app, {
     routePrefix: "/api",

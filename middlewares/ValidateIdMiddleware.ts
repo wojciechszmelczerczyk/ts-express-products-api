@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 import { ExpressMiddlewareInterface } from "routing-controllers";
 import { Service } from "typedi";
+import { Request, Response } from "express";
 
 @Service()
 export class ValidateIdMiddleware implements ExpressMiddlewareInterface {
-  use(req: any, res: any, next: (err?: any) => any) {
+  use(req: Request, res: Response, next: (err?: any) => any) {
     const id = req.params.id;
 
     // if put or delete request, check if id was provided

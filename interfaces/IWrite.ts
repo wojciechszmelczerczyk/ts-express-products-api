@@ -1,5 +1,6 @@
+import { Response } from "express";
 import { IProduct } from "./IProduct";
 
 export interface IWrite {
-  insert(product: IProduct, res: any): any;
+  insert(product: IProduct, res: Response): any;
 }

@@ -13,10 +13,9 @@ import {
   Delete,
 } from "routing-controllers";
 import { Service } from "typedi";
-import { IProduct } from "../interfaces/IProduct";
+import { IProduct } from "../interfaces";
 import ProductService from "../services/ProductService";
-import { ErrorMiddleware } from "../middlewares/ErrorMiddleware";
-import { ValidateIdMiddleware } from "../middlewares/ValidateIdMiddleware";
+import { ErrorMiddleware, ValidateIdMiddleware } from "../middlewares";
 
 @JsonController("/products")
 @Service()

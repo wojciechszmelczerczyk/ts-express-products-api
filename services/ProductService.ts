@@ -1,6 +1,6 @@
 import { Response } from "express";
 import { Service } from "typedi";
-import { IProduct } from "../interfaces/IProduct";
+import { IProduct } from "../interfaces";
 import ProductRepository from "../repositories/ProductRepository";
 
 @Service()

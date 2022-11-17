@@ -1,8 +1,6 @@
 import { Service } from "typedi";
 import Product from "../models/Product";
-import { IRead } from "../interfaces/IRead";
-import { IWrite } from "../interfaces/IWrite";
-import { IProduct } from "../interfaces/IProduct";
+import { IProduct, IWrite, IRead } from "../interfaces";
 import { Response } from "express";
 
 @Service()

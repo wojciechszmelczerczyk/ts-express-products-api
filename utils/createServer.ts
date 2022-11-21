@@ -9,6 +9,8 @@ export const createServer = (): Application => {
 
   const app: Application = express();
 
+  app.use(express.json());
+
   return useExpressServer(app, {
     routePrefix: "/api",
     controllers: [ProductController],

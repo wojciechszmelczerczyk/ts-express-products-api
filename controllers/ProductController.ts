@@ -15,7 +15,11 @@ import {
 import { Service } from "typedi";
 import { IProduct } from "../interfaces";
 import ProductService from "../services/ProductService";
-import { ErrorMiddleware, ValidateIdMiddleware } from "../middlewares";
+import {
+  ErrorMiddleware,
+  ValidateIdMiddleware,
+  ValidateBodyMiddleware,
+} from "../middlewares";
 
 @JsonController("/products")
 @Service()
@@ -38,6 +42,7 @@ export class ProductController {
   }
 
   @Post()
+  @UseBefore(ValidateBodyMiddleware)
   @UseAfter(ErrorMiddleware)
   createProduct(
     @Req() _req: Request,
@@ -48,7 +53,7 @@ export class ProductController {
   }
 
   @Put("/:id?")
-  @UseBefore(ValidateIdMiddleware)
+  @UseBefore(ValidateIdMiddleware, ValidateBodyMiddleware)
   @UseAfter(ErrorMiddleware)
   updateProduct(
     @Req() _req: Request,
